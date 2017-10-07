@@ -86,10 +86,11 @@ scheme="$2"
 
 xcodebuild \
     -exportArchive \
-    -exportPath "$scheme" \
+    -exportPath . \
     -archivePath "$scheme".xcarchive \
     $XCODEBUILD_PARAMS \
-    -exportFormat ipa
+    -exportOptionsPlist  `dirname $0`/adhoc.plist
+#    -exportFormat ipa
 #    -exportProvisioningProfile "RPHL_Internal_Staging_Distribution_Profile.mobileprovision"
 return $?
 }

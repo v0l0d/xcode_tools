@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+export projectname=""
+export scheme=""
+
 export testsGit="https://github.com/v0l0d/RedPlanetApp.git"
 export appiumPort=4725
 export appiumBootstrapPort=4727
