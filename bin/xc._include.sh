@@ -89,7 +89,8 @@ xcodebuild \
     -exportPath . \
     -archivePath "$scheme".xcarchive \
     $XCODEBUILD_PARAMS \
-    -exportOptionsPlist  `dirname $0`/adhoc.plist
+    -exportOptionsPlist ExportOptions.plist 
+#    -exportOptionsPlist  `dirname $0`/adhoc.plist
 #    -exportFormat ipa
 #    -exportProvisioningProfile "RPHL_Internal_Staging_Distribution_Profile.mobileprovision"
 return $?
